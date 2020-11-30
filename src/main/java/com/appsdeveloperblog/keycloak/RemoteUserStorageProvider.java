@@ -13,10 +13,13 @@ public class RemoteUserStorageProvider implements UserStorageProvider,
 UserLookupProvider, CredentialInputValidator {
 	private KeycloakSession session; 
 	private ComponentModel model;
+	private UsersApiService usersService;
 	
-	public RemoteUserStorageProvider(KeycloakSession session, ComponentModel model) {
+	public RemoteUserStorageProvider(KeycloakSession session, 
+			ComponentModel model, UsersApiService usersService) {
 		this.session = session;
 		this.model = model;
+		this.usersService = usersService;
 	}
 
 
