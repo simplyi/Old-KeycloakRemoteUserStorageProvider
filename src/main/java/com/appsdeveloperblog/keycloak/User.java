@@ -6,7 +6,14 @@ public class User {
     private String email;
     private String userName;
     private String userId;
+    private String roles;
     
+	public String getRoles() {
+		return roles;
+	}
+	public void setRoles(String roles) {
+		this.roles = roles;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
