@@ -25,36 +25,7 @@ public class RemoteUserStorageProvider implements UserLookupProvider, Credential
 		this.model = model;
 		this.usersService = usersService;
 	}
-
-	protected UserModel createAdapter(RealmModel realm, String username) {
-
-		// Create a new user adapter based on the AbstractUserAdapter class
-		return new AbstractUserAdapter(session, realm, model) {
-
-			// Override the getUsername method to return the username from the remote
-			// service
-			@Override
-
-			public String getUsername() {
-
-				return username;
-
-			}
-
-			@Override
-			public SubjectCredentialManager credentialManager() {
-
-				// Create a new credential manager based on the LegacyUserCredentialManager
-				// class
-				return new LegacyUserCredentialManager(session, realm, this) {
-
-				};
-
-			}
-
-		};
-	}
-
+ 
 	@Override
 	public boolean supportsCredentialType(String credentialType) {
 
@@ -87,7 +58,7 @@ public class RemoteUserStorageProvider implements UserLookupProvider, Credential
 		User user = usersService.getUserByUserName(username);
 
 		if (user != null) {
-			returnValue = createAdapter(realm, username);
+			returnValue = new UserAdapter(session, realm, model, user);
 		}
 
 		return returnValue;
