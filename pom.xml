@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.0</version>
+		<version>3.3.0</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.appsdeveloperblog.keycloak</groupId>
@@ -16,7 +16,7 @@
 	<description>Keycloak User Storage Provider Implementation</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 
 	<dependencies>
@@ -29,7 +29,7 @@
 		<dependency>
 			<groupId>org.keycloak</groupId>
 			<artifactId>keycloak-server-spi</artifactId>
-			<version>21.1.1</version> <!-- 11.0.3 -->
+			<version>24.0.4</version> <!-- 11.0.3 -->
 			<scope>provided</scope>
 		</dependency>
 
@@ -37,14 +37,14 @@
 		<dependency>
 			<groupId>org.keycloak</groupId>
 			<artifactId>keycloak-core</artifactId>
-			<version>21.1.1</version>
+			<version>24.0.4</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.keycloak/keycloak-services -->
 		<dependency>
 			<groupId>org.keycloak</groupId>
 			<artifactId>keycloak-services</artifactId>
-			<version>21.1.1</version>
+			<version>24.0.4</version>
 			<scope>provided</scope>
 		</dependency>
 		
@@ -52,23 +52,9 @@
 		<dependency>
 		    <groupId>org.keycloak</groupId>
 		    <artifactId>keycloak-model-legacy</artifactId>
-		    <version>21.1.1</version>
+		    <version>24.0.4</version>
 		</dependency>
  
-	
-	<!--	
- 
-<dependency>
-    <groupId>org.jboss.resteasy</groupId>
-    <artifactId>resteasy-client</artifactId>
-    <version>6.2.4.Final</version>
-</dependency>
- <dependency>
-    <groupId>jakarta.ws.rs</groupId>
-    <artifactId>jakarta.ws.rs-api</artifactId>
-    <version>3.1.0</version>
-</dependency>
- -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

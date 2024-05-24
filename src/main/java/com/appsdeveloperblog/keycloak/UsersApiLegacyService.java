@@ -1,14 +1,13 @@
 package com.appsdeveloperblog.keycloak;
 
 import java.io.IOException;
-
-import javax.ws.rs.PathParam;
-
 import org.jboss.logging.Logger;
 import org.keycloak.broker.provider.util.SimpleHttp;
 import org.keycloak.models.KeycloakSession;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import jakarta.ws.rs.PathParam;
 
 public class UsersApiLegacyService {
 	KeycloakSession session;
